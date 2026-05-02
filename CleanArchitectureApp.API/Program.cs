@@ -1,10 +1,12 @@
 using MediatR;
+using FluentValidation;
 using CleanArchitectureApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using CleanArchitectureApp.Application.Interfaces;
 using CleanArchitectureApp.Infrastructure.Repositories;
 using CleanArchitectureApp.Application.Features.Products.Commands;
 using CleanArchitectureApp.Application.Features.Products.Queries;
+using CleanArchitectureApp.Application.Behaviours;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +36,16 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+// Register the validation pipeline behavior
+builder.Services.AddTransient(
+    typeof(IPipelineBehavior<,>),
+    typeof(ValidationBehavior<,>)
+);
+
+// Register all validators from Application assembly
+builder.Services.AddValidatorsFromAssembly(
+    typeof(CleanArchitectureApp.Application.Features.Products.Validators.CreateProductCommandValidator).Assembly
+);
 
 var app = builder.Build();
 
@@ -49,6 +61,7 @@ app.UseHttpsRedirection();
 
 // Maps controller endpoints
 app.MapControllers();
+
 
 // Starts the application
 app.Run();

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "d1SM8FsJ4b0=",
+  "dgSpecHash": "m2egizidtH0=",
   "success": true,
   "projectFilePath": "/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/CleanArchitectureApp.Application.csproj",
   "expectedPackageFiles": [
     "/Users/rianaghd/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/Users/rianaghd/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
+    "/Users/rianaghd/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.1.1/fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
     "/Users/rianaghd/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
     "/Users/rianaghd/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/Users/rianaghd/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
