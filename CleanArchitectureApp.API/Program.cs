@@ -17,9 +17,10 @@ builder.Services.AddSwaggerGen();
 
 // Registers MediatR and scans the Application layer for all Commands, Queries, and Handlers
 builder.Services.AddMediatR(cfg =>
-{
-    cfg.RegisterServicesFromAssembly(typeof(GetProductsQuery).Assembly);
-});
+    cfg.RegisterServicesFromAssembly(
+        typeof(CleanArchitectureApp.Application.Features.Products.Queries.GetProductsQuery).Assembly
+    )
+);
 
 // Registers the Entity Framework DbContext with PostgreSQL database connection
 builder.Services.AddDbContext<AppDbContext>(options =>

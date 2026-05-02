@@ -4,12 +4,12 @@ using CleanArchitectureApp.Application.Interfaces;
 
 namespace CleanArchitectureApp.Application.Features.Products.Queries;
 
-public class GetProductByIdQueryHandler 
-    : IRequestHandler<GetProductByIdQuery, Product?>
+public class GetProductsQueryHandler 
+    : IRequestHandler<GetProductsQuery, List<Product>>
 {
     private readonly IProductRepository _repository;
 
-    public GetProductByIdQueryHandler(IProductRepository repository)
+    public GetProductsQueryHandler(IProductRepository repository)
     {
         _repository = repository;
     }

@@ -1,6 +1,16 @@
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/bin/Debug/net10.0/CleanArchitectureApp.Application.deps.json
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/bin/Debug/net10.0/CleanArchitectureApp.Application.dll
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/bin/Debug/net10.0/CleanArchitectureApp.Application.pdb
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/bin/Debug/net10.0/CleanArchitectureApp.Domain.dll
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/bin/Debug/net10.0/CleanArchitectureApp.Domain.pdb
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/CleanArchitectureApp.Application.csproj.AssemblyReference.cache
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/CleanArchitectureApp.Application.GeneratedMSBuildEditorConfig.editorconfig
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/CleanArchitectureApp.Application.AssemblyInfoInputs.cache
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/CleanArchitectureApp.Application.AssemblyInfo.cs
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/CleanArchitectureApp.Application.csproj.CoreCompileInputs.cache
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/CleanArchitectureApp.Application.sourcelink.json
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/CleanArc.01993744.Up2Date
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/CleanArchitectureApp.Application.dll
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/refint/CleanArchitectureApp.Application.dll
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/CleanArchitectureApp.Application.pdb
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Application/obj/Debug/net10.0/ref/CleanArchitectureApp.Application.dll
