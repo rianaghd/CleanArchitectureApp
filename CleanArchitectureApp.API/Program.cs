@@ -77,6 +77,11 @@ builder.Services.AddValidatorsFromAssembly(
     typeof(CleanArchitectureApp.Application.Features.Products.Validators.CreateProductCommandValidator).Assembly
 );
 
+builder.Services.AddTransient(
+    typeof(IPipelineBehavior<,>),
+    typeof(LoggingBehavior<,>)
+); 
+
 // Register UserRepository
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
