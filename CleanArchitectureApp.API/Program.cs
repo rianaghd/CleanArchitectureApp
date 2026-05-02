@@ -7,6 +7,9 @@ using CleanArchitectureApp.Infrastructure.Repositories;
 using CleanArchitectureApp.Application.Features.Products.Commands;
 using CleanArchitectureApp.Application.Features.Products.Queries;
 using CleanArchitectureApp.Application.Behaviours;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +18,34 @@ builder.Services.AddControllers();
 
 // Enables Swagger for API documentation and testing
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Enter your JWT token here."
+    });
+
+    options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 
 // Registers MediatR and scans the Application layer for all Commands, Queries, and Handlers
 builder.Services.AddMediatR(
@@ -47,6 +77,29 @@ builder.Services.AddValidatorsFromAssembly(
     typeof(CleanArchitectureApp.Application.Features.Products.Validators.CreateProductCommandValidator).Assembly
 );
 
+// Register UserRepository
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+// Configure JWT Authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
+            )
+        };
+    });
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 // Enables Swagger UI in development environment
@@ -58,6 +111,9 @@ if (app.Environment.IsDevelopment())
 
 // Redirects HTTP requests to HTTPS
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 // Maps controller endpoints
 app.MapControllers();

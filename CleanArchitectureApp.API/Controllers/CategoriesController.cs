@@ -2,9 +2,12 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using CleanArchitectureApp.Application.Features.Categories.Commands;
 using CleanArchitectureApp.Application.Features.Categories.Queries;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace CleanArchitectureApp.API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class CategoriesController : ControllerBase
