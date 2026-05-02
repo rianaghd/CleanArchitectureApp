@@ -33,6 +33,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Registers the repository implementation for dependency injection
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
 var app = builder.Build();
 
 // Enables Swagger UI in development environment

@@ -10,5 +10,9 @@ public class MappingProfile : Profile
     {
         CreateMap<Product, ProductDto>();
         CreateMap<ProductDto, Product>();
+
+        CreateMap<Category, CategoryDto>();
+        CreateMap<CategoryDto, Category>();
     }
+
 }
