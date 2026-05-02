@@ -1,4 +1,5 @@
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/bin/Debug/net10.0/CleanArchitectureApp.Infrastructure.deps.json
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/bin/Debug/net10.0/CleanArchitectureApp.Infrastructure.runtimeconfig.json
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/bin/Debug/net10.0/CleanArchitectureApp.Infrastructure.dll
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/bin/Debug/net10.0/CleanArchitectureApp.Infrastructure.pdb
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/bin/Debug/net10.0/CleanArchitectureApp.Application.dll
@@ -10,10 +11,10 @@
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/CleanArchitectureApp.Infrastructure.AssemblyInfoInputs.cache
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/CleanArchitectureApp.Infrastructure.AssemblyInfo.cs
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/CleanArchitectureApp.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/CleanArchitectureApp.Infrastructure.sourcelink.json
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/CleanArc.4C7979BB.Up2Date
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/CleanArchitectureApp.Infrastructure.dll
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/refint/CleanArchitectureApp.Infrastructure.dll
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/CleanArchitectureApp.Infrastructure.pdb
-/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/ref/CleanArchitectureApp.Infrastructure.dll
-/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/bin/Debug/net10.0/CleanArchitectureApp.Infrastructure.runtimeconfig.json
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/CleanArchitectureApp.Infrastructure.genruntimeconfig.cache
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Infrastructure/obj/Debug/net10.0/ref/CleanArchitectureApp.Infrastructure.dll
