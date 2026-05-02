@@ -4,7 +4,8 @@ using CleanArchitectureApp.Application.Interfaces;
 
 namespace CleanArchitectureApp.Application.Features.Products.Queries;
 
-public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery,  List<Product>>
+public class GetProductByIdQueryHandler 
+    : IRequestHandler<GetProductByIdQuery, Product?>
 {
     private readonly IProductRepository _repository;
 
@@ -13,8 +14,8 @@ public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery,  
         _repository = repository;
     }
 
-    public async Task<Product?> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
+    public Task<List<Product>> Handle(GetProductsQuery request, CancellationToken cancellationToken)
     {
-        return _repository.GetById(request.Id);
+        return Task.FromResult(_repository.GetAll());
     }
 }
