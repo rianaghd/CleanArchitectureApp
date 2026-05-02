@@ -23,4 +23,9 @@ public class ProductRepository : IProductRepository
         // Persists changes to the database (executes SQL INSERT)
         await _context.SaveChangesAsync();
     }
+    
+    public List<Product> GetAll()
+    {
+        return _context.Products.ToList();
+    }
 }
