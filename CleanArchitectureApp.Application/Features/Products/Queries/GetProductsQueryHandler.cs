@@ -4,17 +4,17 @@ using CleanArchitectureApp.Application.Interfaces;
 
 namespace CleanArchitectureApp.Application.Features.Products.Queries;
 
-public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, List<Product>>
+public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery,  List<Product>>
 {
     private readonly IProductRepository _repository;
 
-    public GetProductsQueryHandler(IProductRepository repository)
+    public GetProductByIdQueryHandler(IProductRepository repository)
     {
         _repository = repository;
     }
 
-    public async Task<List<Product>> Handle(GetProductsQuery request, CancellationToken cancellationToken)
+    public async Task<Product?> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
     {
-        return _repository.GetAll();
+        return _repository.GetById(request.Id);
     }
 }

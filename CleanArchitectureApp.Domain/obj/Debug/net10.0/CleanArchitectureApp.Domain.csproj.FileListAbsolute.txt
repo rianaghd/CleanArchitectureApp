@@ -5,8 +5,8 @@
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Domain/obj/Debug/net10.0/CleanArchitectureApp.Domain.AssemblyInfoInputs.cache
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Domain/obj/Debug/net10.0/CleanArchitectureApp.Domain.AssemblyInfo.cs
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Domain/obj/Debug/net10.0/CleanArchitectureApp.Domain.csproj.CoreCompileInputs.cache
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Domain/obj/Debug/net10.0/CleanArchitectureApp.Domain.sourcelink.json
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Domain/obj/Debug/net10.0/CleanArchitectureApp.Domain.dll
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Domain/obj/Debug/net10.0/refint/CleanArchitectureApp.Domain.dll
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Domain/obj/Debug/net10.0/CleanArchitectureApp.Domain.pdb
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Domain/obj/Debug/net10.0/ref/CleanArchitectureApp.Domain.dll
-/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.Domain/obj/Debug/net10.0/CleanArchitectureApp.Domain.sourcelink.json
