@@ -171,3 +171,4 @@
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.API/obj/Debug/net10.0/CleanArchitectureApp.API.pdb
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.API/obj/Debug/net10.0/CleanArchitectureApp.API.genruntimeconfig.cache
 /Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.API/obj/Debug/net10.0/ref/CleanArchitectureApp.API.dll
+/Users/rianaghd/CleanArchitectureApp/CleanArchitectureApp.API/bin/Debug/net10.0/AutoMapper.dll

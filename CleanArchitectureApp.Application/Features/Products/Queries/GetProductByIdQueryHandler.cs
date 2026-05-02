@@ -1,21 +1,25 @@
+using AutoMapper;
 using MediatR;
-using CleanArchitectureApp.Domain.Entities;
+using CleanArchitectureApp.Application.DTOs;
 using CleanArchitectureApp.Application.Interfaces;
 
 namespace CleanArchitectureApp.Application.Features.Products.Queries;
 
-public class GetProductByIdQueryHandler 
-    : IRequestHandler<GetProductByIdQuery, Product?>
+public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, ProductDto?>
 {
     private readonly IProductRepository _repository;
+    private readonly IMapper _mapper;
 
-    public GetProductByIdQueryHandler(IProductRepository repository)
+    public GetProductByIdQueryHandler(IProductRepository repository, IMapper mapper)
     {
         _repository = repository;
+        _mapper = mapper;
     }
 
-    public Task<Product?> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
+    public Task<ProductDto?> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
     {
-        return Task.FromResult(_repository.GetById(request.Id));
+        var product = _repository.GetById(request.Id);
+        var dto = _mapper.Map<ProductDto?>(product);
+        return Task.FromResult(dto);
     }
 }

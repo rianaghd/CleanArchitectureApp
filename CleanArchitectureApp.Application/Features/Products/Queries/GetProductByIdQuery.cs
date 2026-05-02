@@ -1,9 +1,9 @@
 using MediatR;
-using CleanArchitectureApp.Domain.Entities;
+using CleanArchitectureApp.Application.DTOs;
 
 namespace CleanArchitectureApp.Application.Features.Products.Queries;
 
-public class GetProductByIdQuery : IRequest<Product?>
+public class GetProductByIdQuery : IRequest<ProductDto?>
 {
     public int Id { get; set; }
 

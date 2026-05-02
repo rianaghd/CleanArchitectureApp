@@ -1,8 +1,8 @@
 using MediatR;
-using CleanArchitectureApp.Domain.Entities;
+using CleanArchitectureApp.Application.DTOs;
 
 namespace CleanArchitectureApp.Application.Features.Products.Queries;
 
-public class GetProductsQuery : IRequest<List<Product>>
+public class GetProductsQuery : IRequest<List<ProductDto>>
 {
 }

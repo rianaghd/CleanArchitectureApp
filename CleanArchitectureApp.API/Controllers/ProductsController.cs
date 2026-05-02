@@ -40,4 +40,20 @@ public class ProductsController : ControllerBase
 
         return Ok(product);
     }
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateProductCommand command)
+    {
+        if (id != command.Id)
+            return BadRequest("ID in URL does not match ID in body.");
+
+        await _mediator.Send(command);
+        return NoContent(); // 204
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _mediator.Send(new DeleteProductCommand(id));
+        return NoContent(); // 204
+    }
 }
